@@ -1,9 +1,5 @@
-def hello():
-    print("hi")
+import re
+import streamlit as st
+from Bio import Entrez
 
-
-def bye():
-    print("bye")
-
-
-print(hello())
+st.title('')
