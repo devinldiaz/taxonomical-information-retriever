@@ -6,7 +6,7 @@ import os
 
 load_dotenv()
 
-Entrez.email = os.getenv('NCBI_EMAIL')
+Entrez.email = os.getenv("NCBI_EMAIL")
 
 def get_info(name):
     try:
@@ -39,13 +39,13 @@ def get_info(name):
         return None
     
 
-st.title('Taxonomical Information Retriever')
+st.title("Taxonomical Information Retriever")
 
-name = st.text_input('Enter the scientific name of an organism:')
+name = st.text_input("Enter the scientific name of an organism:")
 
-if st.button('Search'):
+if st.button("Search"):
     info = get_info(name)
-    st.header('NCBI Taxonomical Information')
+    st.header("NCBI Taxonomical Information")
     if isinstance(info, str):
         st.error(info)
     else:
