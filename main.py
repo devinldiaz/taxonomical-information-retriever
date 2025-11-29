@@ -39,18 +39,14 @@ def get_info(name):
         return None
     
 
-st.title("Taxonomical Information Retriever")
+# Define the pages
+main_page = st.Page("home.py", title="Home", icon="🏠")
+page_2 = st.Page("digenea.py", title="Digenea", icon="✨")
+page_3 = st.Page("cestoda.py", title="Cestoda", icon="✨")
 
-name = st.text_input("Enter the scientific name of an organism:")
+# Set up navigation
+pg = st.navigation([main_page, page_2, page_3])
 
-if st.button("Search"):
-    info = get_info(name)
-    st.header("NCBI Taxonomical Information")
-    if isinstance(info, str):
-        st.error(info)
-    else:
-        st.success(f"**Name Found:** *{info['Scientific Name']}* ({info['Rank'].capitalize()})")
-        st.markdown(f"**Taxonomy ID:** `{info['Taxonomy ID']}`")
-        st.markdown(f"**Full Lineage:** {info['Lineage']}")
-        
-        st.markdown('---')
+# Run the selected page
+pg.run()
+
