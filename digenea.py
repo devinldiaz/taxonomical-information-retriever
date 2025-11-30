@@ -11,9 +11,9 @@ row3 = st.columns(3)
 
 with row1[0]:
     parasite_card(
-        "https://www.xpedite-dx.com/fileadmin/benutzerdaten/xpedite-dx-com/bilder/Applications/Microscopy_Schistosoma_mansoni_adult.jpg",
+        "https://www.bioworld.com/ext/resources/BWS/BWS-library/Schistosoma-parasite-infection.webp?",
         "Schistosoma mansoni",
-        "A parasitic worm that causes schistosomiasis in humans, primarily affecting the intestines and liver.",
+        "Causes intestinal schistosomiasis in humans",
     )
 
 with row1[1]:

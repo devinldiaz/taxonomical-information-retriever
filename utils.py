@@ -1,4 +1,6 @@
 import os
+
+import matplotlib.pyplot as plt
 import streamlit as st
 from Bio import Entrez
 from dotenv import load_dotenv
@@ -56,10 +58,27 @@ def parasite_card(image_url, parasite_name, description=""):
             if isinstance(info, str):
                 st.error(info)
             else:
-                st.success(
-                    f"**Name Found:** *{info['Scientific Name']}*({info['Rank'].capitalize()})"
-                )
+                st.success(f"**Name:** *{info['Scientific Name']}*({info['Rank']})")
                 # st.markdown(f"**Taxonomy ID:** `{info['Taxonomy ID']}`")
                 st.markdown(f"**Full Lineage:** {info['Lineage']}")
                 st.markdown("---")
     return None
+
+
+def plot_phylogeny(lineage_string):
+    lineage = lineage_string.split(" > ")
+
+    fig, ax = plt.subplots(figsize=(4, 6))
+
+    y_start = 1.0
+    y_step = 0.1
+
+    for i, node in enumerate(lineage):
+        y = y_start - i * y_step
+        ax.text(0.1, y, node, fontsize=10, verticalalignment="center")
+        if i > 0:
+            y_prev = y_start - (i - 1) * y_step
+            ax.plot([0.05, 0.05], [y_prev, y], linewidth=2)
+
+    ax.axis("off")
+    return fig
