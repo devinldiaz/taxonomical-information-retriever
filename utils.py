@@ -26,7 +26,7 @@ def get_info(name):
         rank = tax_record[0]["Rank"]
         lineage = tax_record[0]["LineageEx"]
 
-        full_lineage = " > ".join([item['ScientificName'] for item in lineage])
+        full_lineage = " > ".join([item["ScientificName"] for item in lineage])
 
         return {
             "Scientific Name": scientific_name,
@@ -46,8 +46,9 @@ def parasite_card(image_url, parasite_name, description=""):
         if description:
             st.write(description)
 
-        if st.button(f"{parasite_name} taxonomy information",
-                     key=f"{parasite_name}_btn"):
+        if st.button(
+            f"{parasite_name} taxonomy information", key=f"{parasite_name}_btn"
+        ):
             info = get_info(parasite_name)
 
             st.header("NCBI Taxonomical Information")
@@ -55,8 +56,10 @@ def parasite_card(image_url, parasite_name, description=""):
             if isinstance(info, str):
                 st.error(info)
             else:
-                st.success(f"**Name Found:** *{info['Scientific Name']}*({info['Rank'].capitalize()})")
+                st.success(
+                    f"**Name Found:** *{info['Scientific Name']}*({info['Rank'].capitalize()})"
+                )
                 # st.markdown(f"**Taxonomy ID:** `{info['Taxonomy ID']}`")
                 st.markdown(f"**Full Lineage:** {info['Lineage']}")
-                st.markdown('---')
+                st.markdown("---")
     return None

@@ -13,7 +13,8 @@ with row1[0]:
     parasite_card(
         "https://www.xpedite-dx.com/fileadmin/benutzerdaten/xpedite-dx-com/bilder/Applications/Microscopy_Schistosoma_mansoni_adult.jpg",
         "Schistosoma mansoni",
-        "A parasitic worm that causes schistosomiasis in humans, primarily affecting the intestines and liver.")
+        "A parasitic worm that causes schistosomiasis in humans, primarily affecting the intestines and liver.",
+    )
 
 with row1[1]:
     tile = row1[1].container(height=300)
