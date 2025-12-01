@@ -54,7 +54,7 @@ def parasite_card(parasite_name, image_url=None, description=""):
         ):
             info = get_info(parasite_name)
 
-            st.header("NCBI Taxonomical Information")
+            st.subheader("NCBI Taxonomical Information")
 
             if isinstance(info, str):
                 st.error(info)

@@ -24,29 +24,50 @@ with row1[1]:
     )
 
 with row1[2]:
-    tile = row1[2].container(height=300)
-    st.header("Schistosoma japonicum")
+    parasite_card(
+        "Schistosoma japonicum",
+        "",
+        "Causes intestinal schistosomiasis in humans"
+    )
 
 with row2[0]:
-    tile = row2[0].container(height=300)
-    st.header("Fasciola hepatica")
+    parasite_card(
+        "Fasciola hepatica",
+        "",
+        "Causes fascioliasis in livestock and humans"
+    )
 
 with row2[1]:
-    tile = row2[1].container(height=300)
-    st.header("Clonorchis sinensis")
+    parasite_card(
+        "Clonorchis sinensis",
+        "",
+        "Causes clonorchiasis in humans"
+    )
 
 with row2[2]:
-    tile = row2[2].container(height=300)
-    st.header("Paragonimus westermani")
+    parasite_card(
+        "Paragonimus westermani",
+        "",
+        "Causes paragonimiasis in humans"
+    )
 
 with row3[0]:
-    tile = row3[0].container(height=300)
-    st.header("Dicrocoelium dendriticum")
+    parasite_card(
+        "Dicrocoelium dendriticum",
+        "",
+        "Causes dicrocoeliasis in livestock"
+    )
 
 with row3[1]:
-    tile = row3[1].container(height=300)
-    st.header("Ribeiroia ondatrae")
+    parasite_card(
+        "Ribeiroia ondatrae",
+        "",
+        "Causes limb malformations in amphibians"
+    )
 
 with row3[2]:
-    title = row3[2].container(height=300)
-    st.header("Leucochloridium variae")
+    parasite_card(
+        "Leucochloridium variae",
+        "",
+        "Infects birds & snails, causing parasitic castration"
+    )
