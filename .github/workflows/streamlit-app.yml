@@ -23,7 +23,7 @@ jobs:
           ruff: true
       - uses: streamlit/streamlit-app-action@v0.0.3
         with:
-          app-path: streamlit_app.py
+          app-path: main.py
           ruff: true
           # Add pytest-args to output junit xml
           pytest-args: -v --junit-xml=test-results.xml
