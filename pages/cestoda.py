@@ -1,5 +1,6 @@
 import streamlit as st
-from utils import parasite_card, get_info, plot_phylogeny
+
+from utils import get_info, plot_phylogeny
 
 st.title("Cestoda")
 
