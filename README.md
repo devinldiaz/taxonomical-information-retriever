@@ -32,9 +32,9 @@ Navigate parasite classes, view species lists, open modals with details, and fet
 taxonomical-info-retriever/
 ├── main.py # Streamlit app entry point
 ├── pages/ # Individual class pages (Streamlit multipage)
-│ ├── Cestoda.py
-│ ├── Trematoda.py
-│ ├── Nematoda.py
+│ ├── cestoda.py
+│ ├── digenea.py
+│ ├── enoplea.py
 │ └── ...
 ├── data/ # Optional cached or static data
 ├── utils/ # NCBI fetchers, helpers, models
