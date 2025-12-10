@@ -1,11 +1,11 @@
 import streamlit as st
 
-from utils import get_info, plot_phylogeny
+from utils import parasite_tab_layout
 
 st.title("Cestoda")
 
-plot = plot_phylogeny(
-    get_info("Taenia solium")["Lineage"]
-)
+if "DATASETS" not in st.session_state:
+    st.session_state["DATASETS"] = {}
 
-st.pyplot(plot)
+dataset = st.session_state["DATASETS"].get("Cestoda", {})
+parasite_tab_layout("Cestoda", dataset)

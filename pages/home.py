@@ -1,13 +1,13 @@
 import streamlit as st
 
-from utils import get_info
+from utils import get_ncbi_info
 
 st.title("Taxonomical Information Retriever")
 
 name = st.text_input("Enter the scientific name of an organism:")
 
 if st.button("Search"):
-    info = get_info(name)
+    info = get_ncbi_info(name)
     st.subheader("NCBI Taxonomical Information")
     if isinstance(info, str):
         st.error(info)
