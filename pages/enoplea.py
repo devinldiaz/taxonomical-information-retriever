@@ -4,4 +4,5 @@ from utils import parasite_tab_layout
 
 st.title("Enoplea")
 
-parasite_tab_layout("Enoplea", st.session_state["DATASETS"]["Enoplea"])
+dataset = st.session_state["DATASETS"].get("Enoplea", {})
+parasite_tab_layout("Enoplea", dataset)

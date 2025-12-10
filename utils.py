@@ -11,12 +11,13 @@ load_dotenv()
 
 Entrez.email = os.getenv("NCBI_EMAIL")
 
-DATASETS = {
-    "Digenea": digenea,
-    "Cestoda": cestoda,
-    "Chromadorea": chromadorea,
-    "Enoplea": enoplea
-}
+if "DATASETS" not in st.session_state:
+    st.session_state["DATASETS"] = {
+        "Digenea": digenea,
+        "Cestoda": cestoda,
+        "Chromadorea": chromadorea,
+        "Enoplea": enoplea
+    }
 
 
 def get_ncbi_info(name):
@@ -53,7 +54,7 @@ def get_ncbi_info(name):
 def parasite_card(name, data):
     st.image(data.get(
         "image", "images/placeholder.jpg"),
-        use_container_width=True)
+        width="stretch")
 
     @st.dialog(f"More about {name}")
     def show_details():
