@@ -5,12 +5,21 @@ import streamlit as st
 from Bio import Entrez
 from dotenv import load_dotenv
 
+from data import cestoda, chromadorea, digenea, enoplea
+
 load_dotenv()
 
 Entrez.email = os.getenv("NCBI_EMAIL")
 
+DATASETS = {
+    "Digenea": digenea,
+    "Cestoda": cestoda,
+    "Chromadorea": chromadorea,
+    "Enoplea": enoplea
+}
 
-def get_info(name):
+
+def get_ncbi_info(name):
     try:
         handle = Entrez.esearch(db="taxonomy", term=name)
         record = Entrez.read(handle)
@@ -41,29 +50,62 @@ def get_info(name):
         return None
 
 
-def parasite_card(parasite_name, image_url=None, description=""):
-    with st.container(border=True):
-        st.subheader(parasite_name)
-        if image_url:
-            st.image(image_url, width=250)
-        if description:
-            st.write(description)
+def parasite_card(name, data):
+    st.image(data.get(
+        "image", "images/placeholder.jpg"),
+        use_container_width=True)
 
-        if st.button(
-            f"{parasite_name} taxonomy information", key=f"{parasite_name}_btn"
-        ):
-            info = get_info(parasite_name)
+    @st.dialog(f"More about {name}")
+    def show_details():
+        st.write(data.get("description", ""))
 
-            st.subheader("NCBI Taxonomical Information")
+        if "taxonomy" in data:
+            st.subheader("Taxonomy")
+            st.json(data["taxonomy"])
 
-            if isinstance(info, str):
-                st.error(info)
-            else:
-                st.success(f"*{info['Scientific Name']}*({info['Rank']})")
-                # st.markdown(f"**Taxonomy ID:** `{info['Taxonomy ID']}`")
-                st.markdown(f"**Full Lineage:** {info['Lineage']}")
-                st.markdown("---")
-    return None
+        if "hosts" in data:
+            st.subheader("Hosts")
+            st.write(", ".join(data["hosts"]))
+
+        if "genome" in data:
+            st.markdown(f"[Genome link]({data['genome']})")
+
+        # OPTIONAL: pull NCBI info
+        ncbi = get_ncbi_info(name)
+        if isinstance(ncbi, dict):
+            st.subheader("NCBI Taxonomy")
+            st.json(ncbi)
+
+            if "Lineage" in ncbi:
+                fig = plot_phylogeny(ncbi["Lineage"])
+                st.pyplot(fig)
+
+    # Clicking button opens the dialog
+    if st.button(f"More about {name}", key=f"btn_{name}"):
+        show_details()
+
+
+def parasite_grid(dataset):
+    names = list(dataset.keys())
+    cols = st.columns(3)
+
+    for idx, name in enumerate(names):
+        with cols[idx % 3]:
+            parasite_card(name, dataset[name])
+
+
+def parasite_tab_layout(title, dataset):
+    tab1, tab2, tab3 = st.tabs(["Overview", "Species", "More"])
+
+    with tab1:
+        st.write(f"### Overview of {title}")
+        st.write("...")
+
+    with tab2:
+        parasite_grid(dataset)
+
+    with tab3:
+        st.write("tbd")
 
 
 def plot_phylogeny(lineage_string):
