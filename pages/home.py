@@ -2,6 +2,9 @@ import streamlit as st
 
 from utils import get_ncbi_info
 
+if "DATASETS" not in st.session_state:
+    st.session_state["DATASETS"] = {}
+
 parasites = {
     name: data
     for group in st.session_state["DATASETS"].values()
@@ -18,7 +21,7 @@ st.markdown("## Taxonomic Groups")
 
 st.markdown(
     """
-    The following parasite groups are currently curated in this dataset.
+    The following parasite groups are currently in this dataset.
     Select a group from the sidebar to explore species-level information.
     """
 )
