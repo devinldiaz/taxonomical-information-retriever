@@ -12,7 +12,7 @@ if "DATASETS" not in st.session_state:
 
 pages = {
     "Home": [
-        st.Page("pages/home.py", title="Home", icon="🏠")
+        st.Page("pages/home.py", title="Home", icon="🧬")
     ],
     "Phylum Platyhelminthes": [
         st.Page("pages/digenea.py", title="Digenea", icon="✨"),
