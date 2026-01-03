@@ -166,7 +166,7 @@ cestoda = {
 
 chromadorea = {
     "Loa loa": {
-        # "image": "images/loa_loa.jpg",
+        "image": "images/loa_loa.jpg",
         "description": "Causes loiasis in humans",
         "taxonomy": {
             "phylum": "Nematoda",
@@ -174,7 +174,7 @@ chromadorea = {
             "order": "Spirurida",
         },
         "hosts": ["Humans", "Deerflies"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../loa_loa"
+        "genome": "https://www.ncbi.nlm.nih.gov/datasets/taxonomy/7209/"
     },
     "Ascaris lumbricoides": {
         # "image": "images/ascaris_lumbricoides.jpg",
