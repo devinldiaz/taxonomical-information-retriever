@@ -73,13 +73,13 @@ def parasite_card(name, data):
         if isinstance(ncbi, dict):
             st.subheader("NCBI Genome Link: ")
             st.markdown(f"[Genome link]({ncbi['Taxonomy URL']})")
+            with st.container(border=True):
+                st.subheader("NCBI Taxonomy")
+                st.json(ncbi)
 
-            st.subheader("NCBI Taxonomy")
-            st.json(ncbi)
-
-            if "Lineage" in ncbi:
-                fig = plot_phylogeny(ncbi["Lineage"])
-                st.pyplot(fig)
+                if "Lineage" in ncbi:
+                    fig = plot_phylogeny(ncbi["Lineage"])
+                    st.pyplot(fig)
 
     # Clicking button opens the dialog
     if st.button(f"More about {name}", key=f"btn_{name}"):

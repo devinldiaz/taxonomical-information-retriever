@@ -1,0 +1,28 @@
+[theme]
+base = "dark"
+
+primaryColor = "#4DFFB2"
+
+backgroundColor = "#08120D"
+
+secondaryBackgroundColor = "#183126"
+
+textColor = "#E6F4EF"
+
+font = "monospace"
+
+headingColor = "#B8FFE4"
+
+linkColor = "#4DFFB2"
+
+borderColor = "#1F3D30"
+
+borderRadius = "8px"
+
+
+[theme.sidebar]
+backgroundColor = "#0C1913"
+
+textColor = "#DFF5EC"
+
+borderColor = "#1F3D30"
