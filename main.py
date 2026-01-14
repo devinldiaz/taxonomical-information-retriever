@@ -7,21 +7,19 @@ if "DATASETS" not in st.session_state:
         "Digenea": digenea,
         "Cestoda": cestoda,
         "Chromadorea": chromadorea,
-        "Enoplea": enoplea
+        "Enoplea": enoplea,
     }
 
 pages = {
-    "Home": [
-        st.Page("pages/home.py", title="Home", icon="🧬")
-    ],
+    "Home": [st.Page("pages/home.py", title="Home", icon="🧬")],
     "Phylum Platyhelminthes": [
         st.Page("pages/digenea.py", title="Digenea", icon="✨"),
-        st.Page("pages/cestoda.py", title="Cestoda", icon="✨")
+        st.Page("pages/cestoda.py", title="Cestoda", icon="✨"),
     ],
     "Phylum Nematoda": [
         st.Page("pages/chromadorea.py", title="Chromadorea", icon="✨"),
-        st.Page("pages/enoplea.py", title="Enoplea", icon="✨")
-    ]
+        st.Page("pages/enoplea.py", title="Enoplea", icon="✨"),
+    ],
 }
 
 # Set up navigation

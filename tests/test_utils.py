@@ -16,9 +16,7 @@ def test_parasite_card_uses_placeholder_if_img_missing(mocker):
     mocker.patch("utils.st.dialog")
     mocker.patch("utils.get_ncbi_info", return_value=None)
 
-    data = {
-        "description": "Test parasite"
-    }
+    data = {"description": "Test parasite"}
 
     utils.parasite_card("Test parasite", data)
 

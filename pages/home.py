@@ -12,9 +12,7 @@ parasites = {
 }
 
 st.title("ParaSite")
-st.caption(
-    "Explore curated taxonomical information on parasitic species."
-)
+st.caption("Explore curated taxonomical information on parasitic species.")
 st.divider()
 
 st.markdown("## Taxonomic Groups")
@@ -45,8 +43,7 @@ for col, (name, common, desc) in zip(cols * 2, groups):
 st.divider()
 
 name = st.text_input(
-    "Parasite not listed? Enter the scientific name & search here:"
-)
+    "Parasite not listed? Enter the scientific name & search here:")
 
 if st.button("Search"):
     info = get_ncbi_info(name)
@@ -64,5 +61,4 @@ st.divider()
 total_species = sum(len(v) for v in st.session_state["DATASETS"].values())
 
 st.caption(
-    f"{total_species}+ curated parasite species • Live taxonomy via NCBI"
-)
+    f"{total_species}+ curated parasite species • Live taxonomy via NCBI")

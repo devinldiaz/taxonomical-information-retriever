@@ -16,7 +16,7 @@ if "DATASETS" not in st.session_state:
         "Digenea": digenea,
         "Cestoda": cestoda,
         "Chromadorea": chromadorea,
-        "Enoplea": enoplea
+        "Enoplea": enoplea,
     }
 
 
@@ -43,12 +43,13 @@ def get_ncbi_info(name):
         return {
             "Scientific Name": scientific_name,
             "Rank": rank,
-            # "Taxonomy ID": tax_id,
+            "Taxonomy ID": tax_id,
+            "Taxonomy URL":
+            f"https://www.ncbi.nlm.nih.gov/datasets/taxonomy/{tax_id}/",
             "Lineage": full_lineage,
         }
     except Exception as e:
-        st.error(f"An error occurred: {e}")
-        return None
+        return f"NCBI error: {e}"
 
 
 def parasite_card(name, data):
@@ -68,12 +69,11 @@ def parasite_card(name, data):
             st.subheader("Hosts")
             st.write(", ".join(data["hosts"]))
 
-        if "genome" in data:
-            st.markdown(f"[Genome link]({data['genome']})")
-
-        # OPTIONAL: pull NCBI info
         ncbi = get_ncbi_info(name)
         if isinstance(ncbi, dict):
+            st.subheader("NCBI Genome Link: ")
+            st.markdown(f"[Genome link]({ncbi['Taxonomy URL']})")
+
             st.subheader("NCBI Taxonomy")
             st.json(ncbi)
 

@@ -8,7 +8,7 @@ digenea = {
             "order": "Diplostomida",
         },
         "hosts": ["Humans", "Freshwater snails"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../schistosoma_mansoni"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../schistosoma_mansoni",
     },
     "Schistosoma haematobium": {
         "image": "images/schistosoma_haematobium.jpg",
@@ -19,7 +19,7 @@ digenea = {
             "order": "Diplostomida",
         },
         "hosts": ["Humans", "Freshwater snails"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../schistosoma_haematobium"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../schistosoma_haematobium",
     },
     "Schistosoma japonicum": {
         "image": "images/schistosoma_japonicum.jpg",
@@ -30,7 +30,7 @@ digenea = {
             "order": "Diplostomida",
         },
         "hosts": ["Humans", "Freshwater snails"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../schistosoma_japonicum"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../schistosoma_japonicum",
     },
     "Fasciola hepatica": {
         "image": "images/fasciola_hepatica.jpg",
@@ -41,7 +41,7 @@ digenea = {
             "order": "Echinostomida",
         },
         "hosts": ["Sheep", "Cattle", "Humans"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../fasciola_hepatica"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../fasciola_hepatica",
     },
     "Clonorchis sinensis": {
         "image": "images/clonorchis_sinensis.jpg",
@@ -52,7 +52,7 @@ digenea = {
             "order": "Opisthorchiida",
         },
         "hosts": ["Humans", "Freshwater fish"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../clonorchis_sinensis"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../clonorchis_sinensis",
     },
     "Paragonimus westermani": {
         "image": "images/paragonimus_westermani.jpg",
@@ -63,7 +63,7 @@ digenea = {
             "order": "Plagiorchiida",
         },
         "hosts": ["Humans", "Freshwater crabs"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../paragonimus_westermani"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../paragonimus_westermani",
     },
     "Dicrocoelium dendriticum": {
         "image": "images/dicrocoelium_dendriticum.jpg",
@@ -74,7 +74,7 @@ digenea = {
             "order": "Plagiorchiida",
         },
         "hosts": ["Sheep", "Cattle", "Deer"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../dicrocoelium_dendriticum"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../dicrocoelium_dendriticum",
     },
     "Ribeiroia ondatrae": {
         "image": "images/ribeiroia_ondatrae.jpg",
@@ -85,8 +85,8 @@ digenea = {
             "order": "Diplostomida",
         },
         "hosts": ["Amphibians", "Snails", "Birds"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../ribeiroia_ondatrae"
-    }
+        "genome": "https://www.ncbi.nlm.nih.gov/.../ribeiroia_ondatrae",
+    },
     # "Leucochloridium variae": {
     #     "image": "images/leucochloridium_variae.jpg",
     #     "description":
@@ -111,7 +111,7 @@ cestoda = {
             "order": "Cyclophyllidea",
         },
         "hosts": ["Human", "Pig"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../taenia_solium"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../taenia_solium",
     },
     "Taenia saginata": {
         "image": "images/taenia_saginata.jpg",
@@ -122,46 +122,37 @@ cestoda = {
             "order": "Cyclophyllidea",
         },
         "hosts": ["Human", "Cattle"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../taenia_saginata"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../taenia_saginata",
     },
-
     "Echinococcus granulosus": {
         "image": "images/echinococcus_granulosus.jpg",
         "description": "Causes hydatid disease; dogs are the definitive host.",
-        "taxonomy": {
-            "class": "Cestoda"
-        },
+        "taxonomy": {"class": "Cestoda"},
         "hosts": ["Dogs", "Sheep", "Humans"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../echinococcus_granulosus"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../echinococcus_granulosus",
     },
     "Echinococcus multilocularis": {
         "image": "images/echinococcus_multilocularis.jpg",
         "description": "Causes alveolar echinococcosis in humans",
-        "taxonomy": {
-            "class": "Cestoda"
-        },
+        "taxonomy": {"class": "Cestoda"},
         "hosts": ["Foxes", "Rodents", "Humans"],
         "genome":
-        "https://www.ncbi.nlm.nih.gov/.../echinococcus_multilocularis"
+        "https://www.ncbi.nlm.nih.gov/.../echinococcus_multilocularis",
     },
     "Hymenolepis nana": {
         "image": "images/hymenolepis_nana.jpg",
         "description": "Causes hymenolepiasis in humans",
-        "taxonomy": {
-            "class": "Cestoda"
-        },
+        "taxonomy": {"class": "Cestoda"},
         "hosts": ["Humans", "Rodents"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../hymenolepis_nana"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../hymenolepis_nana",
     },
     "Diphyllobothrium latum": {
         "image": "images/diphyllobothrium_latum.jpg",
         "description": "Causes diphyllobothriasis in humans",
-        "taxonomy": {
-            "class": "Cestoda"
-        },
+        "taxonomy": {"class": "Cestoda"},
         "hosts": ["Humans", "Fish"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../diphyllobothrium_latum"
-    }
+        "genome": "https://www.ncbi.nlm.nih.gov/.../diphyllobothrium_latum",
+    },
 }
 
 chromadorea = {
@@ -174,7 +165,7 @@ chromadorea = {
             "order": "Spirurida",
         },
         "hosts": ["Humans", "Deerflies"],
-        "genome": "https://www.ncbi.nlm.nih.gov/datasets/taxonomy/7209/"
+        "genome": "https://www.ncbi.nlm.nih.gov/datasets/taxonomy/7209/",
     },
     "Ascaris lumbricoides": {
         # "image": "images/ascaris_lumbricoides.jpg",
@@ -185,7 +176,7 @@ chromadorea = {
             "order": "Ascaridida",
         },
         "hosts": ["Humans"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../ascaris_lumbricoides"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../ascaris_lumbricoides",
     },
     "Strongyloides stercoralis": {
         # "image": "images/strongyloides_stercoralis.jpg",
@@ -196,7 +187,7 @@ chromadorea = {
             "order": "Rhabditida",
         },
         "hosts": ["Humans"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../strongyloides_stercoralis"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../strongyloides_stercoralis",
     },
     "Anisakis simplex": {
         # "image": "images/anisakis_simplex.jpg",
@@ -207,8 +198,8 @@ chromadorea = {
             "order": "Ascaridida",
         },
         "hosts": ["Marine mammals", "Fish", "Humans"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../anisakis_simplex"
-    }
+        "genome": "https://www.ncbi.nlm.nih.gov/.../anisakis_simplex",
+    },
 }
 
 enoplea = {
@@ -221,7 +212,7 @@ enoplea = {
             "order": "Trichocephalida",
         },
         "hosts": ["Humans", "Pigs", "Wild Boar"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../trichinella_spiralis"
+        "genome": "https://www.ncbi.nlm.nih.gov/.../trichinella_spiralis",
     },
     "Trichuris trichiura": {
         # "image": "images/trichuris_trichiura.jpg",
@@ -232,6 +223,6 @@ enoplea = {
             "order": "Trichocephalida",
         },
         "hosts": ["Humans"],
-        "genome": "https://www.ncbi.nlm.nih.gov/.../trichuris_trichiura"
-    }
+        "genome": "https://www.ncbi.nlm.nih.gov/.../trichuris_trichiura",
+    },
 }
