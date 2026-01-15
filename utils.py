@@ -1,4 +1,5 @@
 import os
+from collections import Counter
 
 import matplotlib.pyplot as plt
 import streamlit as st
@@ -95,15 +96,36 @@ def parasite_grid(dataset):
             parasite_card(name, dataset[name])
 
 
+def overview_tab(title, dataset):
+    st.write(f"### Overview of {title}")
+    if not dataset:
+        st.info("No species data available.")
+        return
+
+    col1, col2, col3 = st.columns(3)
+
+    col1.metric("Species in dataset", len(dataset))
+    all_hosts = [
+        host
+        for parasite in dataset.values()
+        for host in parasite.get("hosts", [])
+    ]
+    col2.metric("Unique hosts", len(set(all_hosts)))
+
+    orders = [
+        parasite.get("taxonomy", {}).get("order", "Unknown")
+        for parasite in dataset.values()
+    ]
+    col3.metric("Orders represented", len(set(orders)))
+
+
 def parasite_tab_layout(title, dataset):
     tab1, tab2, tab3 = st.tabs(["Overview", "Species", "More"])
 
     with tab1:
-        st.write(f"### Overview of {title}")
-        st.write("...")
+        overview_tab(title, dataset)
 
     with tab2:
-        st.metric("Included species", len(dataset))
         parasite_grid(dataset)
 
     with tab3:
