@@ -142,7 +142,14 @@ def parasite_tab_layout(title, dataset):
         parasite_grid(dataset)
 
     with tab3:
-        st.write("tbd")
+        st.subheader("Data sources")
+        st.markdown("""
+            - **NCBI Taxonomy** – live taxonomy lookups
+            - **Curated species lists** – manually reviewed
+            - **Genome links** – derived from NCBI Taxonomy IDs
+        """)
+        with st.expander("View raw dataset"):
+            st.json(dataset)
 
 
 def plot_phylogeny(lineage_string):
