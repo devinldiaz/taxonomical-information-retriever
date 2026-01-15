@@ -103,6 +103,7 @@ def parasite_tab_layout(title, dataset):
         st.write("...")
 
     with tab2:
+        st.metric("Included species", len(dataset))
         parasite_grid(dataset)
 
     with tab3:
