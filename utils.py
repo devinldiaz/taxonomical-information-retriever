@@ -118,6 +118,19 @@ def overview_tab(title, dataset):
     ]
     col3.metric("Orders represented", len(set(orders)))
 
+    st.divider()
+
+    order_counts = Counter(orders)
+    host_counts = Counter(all_hosts)
+
+    if order_counts:
+        st.subheader("Species per taxonomic order")
+        st.bar_chart(order_counts)
+
+    if host_counts:
+        st.subheader("Most common hosts")
+        st.bar_chart(dict(host_counts.most_common(10)))
+
 
 def parasite_tab_layout(title, dataset):
     tab1, tab2, tab3 = st.tabs(["Overview", "Species", "More"])
