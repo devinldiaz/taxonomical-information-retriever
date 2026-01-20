@@ -43,7 +43,7 @@ taxonomical-info-retriever/
 ## Run Locally
 ### 1. Clone the repository  
 ```bash
-git clone https://github.com/<your-username>/taxonomical-info-retriever.git
+git clone https://github.com/devinldiaz/taxonomical-info-retriever.git
 cd taxonomical-info-retriever
 ```
 ### 2. Install dependencies
