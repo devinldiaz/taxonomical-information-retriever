@@ -168,7 +168,7 @@ chromadorea = {
         "genome": "https://www.ncbi.nlm.nih.gov/datasets/taxonomy/7209/",
     },
     "Ascaris lumbricoides": {
-        # "image": "images/ascaris_lumbricoides.jpg",
+        "image": "images/ascaris_lumbricoides.jpg",
         "description": "Causes ascariasis in humans",
         "taxonomy": {
             "phylum": "Nematoda",
@@ -179,7 +179,7 @@ chromadorea = {
         "genome": "https://www.ncbi.nlm.nih.gov/.../ascaris_lumbricoides",
     },
     "Strongyloides stercoralis": {
-        # "image": "images/strongyloides_stercoralis.jpg",
+        "image": "images/strongyloides_stercoralis.jpg",
         "description": "Causes strongyloidiasis in humans",
         "taxonomy": {
             "phylum": "Nematoda",
@@ -190,7 +190,7 @@ chromadorea = {
         "genome": "https://www.ncbi.nlm.nih.gov/.../strongyloides_stercoralis",
     },
     "Anisakis simplex": {
-        # "image": "images/anisakis_simplex.jpg",
+        "image": "images/anisakis_simplex.jpg",
         "description": "Causes anisakiasis in humans",
         "taxonomy": {
             "phylum": "Nematoda",
@@ -215,7 +215,7 @@ enoplea = {
         "genome": "https://www.ncbi.nlm.nih.gov/.../trichinella_spiralis",
     },
     "Trichuris trichiura": {
-        # "image": "images/trichuris_trichiura.jpg",
+        "image": "images/trichuris_trichiura.jpg",
         "description": "Causes trichuriasis in humans",
         "taxonomy": {
             "phylum": "Nematoda",
